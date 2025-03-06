@@ -50,7 +50,8 @@ namespace ClassLibrary
             }
         }
 
-        public int Count => phoneBook.Count;            
+        public int Count => phoneBook.Count;      
+        
 
         public bool AddContact(string name, string number)
         {
