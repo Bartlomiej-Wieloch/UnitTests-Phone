@@ -22,7 +22,7 @@ namespace TestProjectPhone
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void Konstruktor_ZaKrotkiNumerTelefonu_ArgumentException()
+        public void Konstruktor_ZaKrotkiNumerTelefonu_Exception()
         {
             // AAA
 
@@ -39,7 +39,7 @@ namespace TestProjectPhone
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void Konstruktor_BrakNumeruTelefonu_ArgumentException()
+        public void Konstruktor_BrakNumeruTelefonu_Exception()
         {
             // Arange
             var wlasciciel = "Bartek";
@@ -53,7 +53,35 @@ namespace TestProjectPhone
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void Konstruktor_BrakImienia_ArgumentException()
+        public void Konstruktor_ZaDlugiNumeruTelefonu_Exception()
+        {
+            // Arange
+            var wlasciciel = "Bartek";
+            var numer = "1234567891";
+
+            // Act
+            var telefon = new Phone(wlasciciel, numer);
+
+            // Assert
+
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Konstruktor_NieprawidloweZnakiWNumerzeTelefonu_Exception()
+        {
+            // Arange
+            var wlasciciel = "Bartek";
+            var numer = "j23456789";
+
+            // Act
+            var telefon = new Phone(wlasciciel, numer);
+
+            // Assert
+
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Konstruktor_BrakImienia_Exception()
         {
             // Arange
             var wlasciciel = "";
@@ -108,7 +136,7 @@ namespace TestProjectPhone
         }
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void AddContact_KsiazkaKontakowPelna_Exception()
+        public void AddContact_KsiazkaKontaktowPelna_Exception()
         {
             // Arange
             var wlasciciel = "Bartek";
