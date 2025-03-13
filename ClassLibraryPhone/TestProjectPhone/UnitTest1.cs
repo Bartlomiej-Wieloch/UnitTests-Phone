@@ -151,7 +151,6 @@ namespace TestProjectPhone
             // Act
             telefon.AddContact("Adam", numer);
 
-            //telefon.AddContact(wlasciciel, numer);
             // Assert
         }
         [TestMethod]
